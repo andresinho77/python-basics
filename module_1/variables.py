@@ -28,6 +28,14 @@ print(type(y))
 
 #Multiple Variables
 aa,bb,cc = 3,2,1
-
 print(aa, bb, cc)
 
+u,i,o = 'Andres','Perro','Nala'
+print(u, i, o)
+
+c = m = n = 0
+print(c, m, n)
+
+#How to print in multiple ways
+print(u,i,o) #with space
+print(u+i+o) #Without space

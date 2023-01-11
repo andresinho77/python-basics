@@ -15,7 +15,7 @@ print (a , b)
 print(b * 3)
 print(A)
 
-#To Find variable Types
+#To Find variable Types s
 print(type(a))
 print(type(A))
 print(type(b))

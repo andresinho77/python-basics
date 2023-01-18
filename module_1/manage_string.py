@@ -41,3 +41,11 @@ print(salida.format(price,quatity,num))
 
 salida = 'El valor {1} y la cantidad {2} y el id {0}'
 print(salida.format(num,price,quatity))
+
+# Using len
+#Count a string characters
+print('Write your frase')
+f=input()
+
+print('The number of charaters for the string is:')
+print(len(f))

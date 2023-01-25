@@ -44,7 +44,9 @@ print(frutas)
 frutas_2 = ['Peras','Fresas','Banana']
 
 frutas.extend(frutas_2)
+lista_resul = frutas + frutas_2
 print(frutas)
+print('***********+',lista_resul)
 
 #Remove elements within the list
 frutas.remove('Banana')
@@ -53,9 +55,38 @@ print(frutas)
 frutas.pop(1)
 print(frutas)
 
+#Delete remove
+del frutas[1]
+print(frutas)
 
+#Clear the List
+brands=['Mazda','Ford','Tesla','BWM','Mercedes','Chevrolet']
+numbers= [1,32,43,5,6,7,23,2,34,5,432,2,3,4,223,6]
+print(brands)
+# brands.clear()
+# print(brands)
+# brands.append('Nala')
+# print(brands)
 
+#Sort the list
+brands.sort()
+print(brands)
 
+#Sort the other way around
+brands.sort(reverse=True)
+print(brands)
+brands.reverse()
+print(brands)
 
+numbers.sort()
+print(numbers)
 
+#Note: You CANNOT sort Mix List (int and String)
 
+#Copy lists 
+brand_new=brands.copy()
+brand_new.append('Ferrari')
+print(brand_new)
+
+brand_new_list=list(brand_new)
+print(brand_new_list)

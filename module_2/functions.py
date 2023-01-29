@@ -1,5 +1,6 @@
-#Create a module
+#Functions
 
+#Return multiples variables
 def arithmetic(a , b):
 
     add= a + b
@@ -16,6 +17,10 @@ print(b)
 print(c)
 print(d)
 
+#Default Arguments 
+def print_name(name='Pepito', last_name='Perez'):
+    print('Hola',name, last_name)
 
-
+print_name()
+print_name('Pepito', 'Perez')
 

@@ -24,3 +24,16 @@ def print_name(name='Pepito', last_name='Perez'):
 print_name()
 print_name('Gonzalo', 'Gomez')
 
+def addition(*nums):
+    sum = 0 
+    for i in nums:
+        if(i>=0):
+            print(i, end='\n')
+            sum += i
+        else:
+            sum += i
+    print('Suma: ', sum)
+    return sum
+
+addition(10,10,12,2131,21312)
+addition(10,10,12,2131,21312, 10,10,12,2131,21312,10,10,12,2131,2131210,10,12,2131,2131210,10,12,2131,21312,-3000000)

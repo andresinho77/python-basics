@@ -24,6 +24,8 @@ def print_name(name='Pepito', last_name='Perez'):
 print_name()
 print_name('Gonzalo', 'Gomez')
 
+# Var
+#We can pass any number of arguments to this function. Internally all these values are represented in the form of a tuple.
 def addition(*nums):
     sum = 0 
     for i in nums:

@@ -22,5 +22,5 @@ def print_name(name='Pepito', last_name='Perez'):
     print('Hola',name, last_name)
 
 print_name()
-print_name('Pepito', 'Perez')
+print_name('Gonzalo', 'Gomez')
 

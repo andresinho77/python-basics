@@ -11,3 +11,15 @@ print(person)
 #Update Values:
 person['calle']='Calle 100'
 print(person)
+person.update({'calle':100})
+print(person)
+
+#Pop (Remove elements using a key)
+person.pop('calle')
+print(person)
+
+#Copy dictionaries
+nuevo = person.copy()
+print(nuevo)
+
+

@@ -3,7 +3,7 @@ import os
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 response = openai.Image.create(
-  prompt="festival gay de perros y gatos en africa",
+  prompt="happy teenegers on a boat in the sea",
   n=2,
   size="1024x1024"
 )

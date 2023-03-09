@@ -7,8 +7,10 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def cost_a(response):
     json_obj = json.loads(response)
-    print(json_obj['choices'])
-    print(json_obj['usage'])
+    a = json_obj['usage']
+    print(a['prompt_tokens']*100)
+    print(a['total_tokens']*30)
+    # print(a[''])
 
 response = openai.Completion.create(
   model="text-davinci-003",

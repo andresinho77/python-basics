@@ -1,7 +1,14 @@
 import os
 import openai
+import json
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
+
+
+def cost_a(response):
+    json_obj = json.loads(response)
+    print(json_obj['choices'])
+    print(json_obj['usage'])
 
 response = openai.Completion.create(
   model="text-davinci-003",
@@ -13,4 +20,4 @@ response = openai.Completion.create(
   presence_penalty=0.0
 )
 
-print(response)
+cost_a(str(response))

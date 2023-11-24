@@ -57,7 +57,7 @@ def main():
     except Exception as e:
         print("Error:", e)
     finally:
-        connection.close()  # Don't forget to close the connection when done
+        connection.close()  
 
 if __name__ == "__main__":
     main()

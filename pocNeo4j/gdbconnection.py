@@ -13,19 +13,17 @@ class Neo4jConnection:
 
 
 # -------------------- ADD NODE METHOD -------------------- #
-
     def add_node(self, label, properties):
         with self._driver.session() as session:
             result = session.execute_write(self._add_node, label, properties)
             return result
     @staticmethod
     def _add_node(tx, label, properties):
-        query = "CREATE (n:`$node_label` $properties) RETURN n"
-        parameters = {"node_label": label, "properties": properties}
+        query = f"CREATE (n:{label} $properties) RETURN n"
+        parameters = {"properties": properties}
         result = tx.run(query, parameters)
         return result.single()[0]
     
-
 # -------------------- DELETE ALL METHOD -------------------- #
     
     def delete_node(self):
@@ -62,3 +60,13 @@ class Neo4jConnection:
         tx.run(query, parameters)
         result = tx.run(query, **parameters)
         return result
+
+# -------------------- EXECUTE READ CYPHER -------------------- #
+    def execute_query_all(self, query, parameters=None):
+        with self._driver.session() as session:
+            try:
+                result = session.run(query, parameters)
+                records = list(result)
+                return records
+            except Exception as e:
+                print(f"Error executing Neo4j query: {e}")

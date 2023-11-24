@@ -1,5 +1,6 @@
 /.DS_Store
 pocNeo4j/neo4jconnection
+oracle/
 __pycache__
 apikeys.key
 

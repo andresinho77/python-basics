@@ -32,7 +32,7 @@ class Neo4jConnection:
 
     @staticmethod
     def _delete_node(tx):
-        query = "MATCH (n) DETACH DELETE n"
+        query = "MATCH (n) DETACH DELETE n "
         tx.run(query)
     
 # -------------------- MERGE NODE METHOD -------------------- #

@@ -26,7 +26,7 @@ async def get_all_nodes():
 @app.get("/wwft")
 async def get_all_nodes():
     # query = "MATCH (c:Customer)-[t*..]->()-[]->(p:Product{wwft_tag:'True'})  RETURN c,  p order by c.name"
-    query = "MATCH (c:Customer)-[t*..]->(a)-[]->(p:Product{wwft_tag:'True'})  RETURN c, a,  p order by c.name"
+    query = "MATCH (c:Customer)-[t*..]->(a)-[]->(p:Product{wwft_tag:'True'})  RETURN DISTINCT c,  p order by c.name"
     connection = Neo4jConnection()
     records = set(connection.execute_query_all(query))
     if records:
